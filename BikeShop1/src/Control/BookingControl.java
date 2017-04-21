@@ -7,7 +7,7 @@ import View.CreditCardView;
 import View.CustomerView;
 import View.LoginView;
 import View.ShoppingCartView;
-// HELLO !!!!
+// Is this still working?
 
 public class BookingControl {
 
