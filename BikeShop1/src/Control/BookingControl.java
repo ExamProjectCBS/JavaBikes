@@ -20,7 +20,7 @@ public class BookingControl {
 
 	public static void main(String[] args) {
 
-
+//Tests get less annyoing
 		Scanner input = new Scanner(System.in);
 
 		//Creating objects
