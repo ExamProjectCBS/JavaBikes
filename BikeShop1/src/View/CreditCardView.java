@@ -12,6 +12,7 @@ public class CreditCardView {
 		Scanner input = new Scanner (System.in);
 		CreditCardModel creditCard1 = new CreditCardModel ();
 
+		System.out.println("To process your order we need your creditcard information.");
 		//Prompting user to type in credit card number
 		String pattern = "\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d";
 		boolean cardNumberCorrect = false;
@@ -84,4 +85,6 @@ public class CreditCardView {
 		System.out.println("=================================================================");
 		return creditCard1;
 	}
+	
+
 }

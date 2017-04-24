@@ -10,8 +10,8 @@ public BikeOfferModel () {
 	}
 	
 
-public BikeOfferModel(String name, int id, double price, int stockAvailable, String offerValidityDate){
-super (name, id, price, stockAvailable);
+public BikeOfferModel(String bikeType, String name, int id, double price, int stockAvailable, String offerValidityDate){
+super (bikeType, name, id, price, stockAvailable);
 this.offerValidityDate = offerValidityDate;
 }
 

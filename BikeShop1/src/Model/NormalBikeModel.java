@@ -11,8 +11,9 @@ public class NormalBikeModel extends BikeModel {
 	}
 
 	//creates normalbikemodel with specific variables
-public NormalBikeModel(String name, int id, double price, int stockAvailable, int gears){
-	super(name, id, price, stockAvailable);
+public NormalBikeModel(String bikeType, String name, int id, double price, int stockAvailable, int gears){
+	super(bikeType, name, id, price, stockAvailable);
+	
 	this.gears = gears;
 }
 

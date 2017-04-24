@@ -1,6 +1,8 @@
 package Model;
 
 public class BikeModel {
+
+	private String bikeType;
 	private String name;
 	private int id;
 	private double price;
@@ -10,11 +12,22 @@ public class BikeModel {
 		
 	}
 	
-	public BikeModel (String name, int id, double price, int stockAvailable) { //Constructor
+	public BikeModel (String bikeType, String name, int id, double price, int stockAvailable) { //Constructor
+		this.bikeType = bikeType;
 		this.name = name;
 		this.id = id;
 		this.price = price;
 		this.stockAvailable = stockAvailable;
+	}
+
+	
+
+	public String getBikeType() {
+		return bikeType;
+	}
+
+	public void setBikeType(String bikeType) {
+		this.bikeType = bikeType;
 	}
 
 	public String getName() {

@@ -12,8 +12,8 @@ public EbikeModel(){
 
 
 //creates ebikemodel with specific variables
-public EbikeModel(String name, int id, double price, int stockAvailable, int batteryRange, int chargingTime){
-super(name, id, price, stockAvailable);
+public EbikeModel(String bikeType, String name, int id, double price, int stockAvailable, int batteryRange, int chargingTime){
+super(bikeType, name, id, price, stockAvailable);
 
 this.batteryRange = batteryRange;
 this.chargingTime = chargingTime;

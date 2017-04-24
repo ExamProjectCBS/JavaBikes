@@ -4,6 +4,8 @@ public class ShoppingProductModel extends BikeModel {
 	
 	private int quantity;
 
+	
+	//getters and setters
 	public ShoppingProductModel(int id, int quantity) {
 		setId(id);
 	
