@@ -1,0 +1,5 @@
+Ebike;Mainy;106;800;15;50;2
+NormalBike;CPH;206;900;100;7
+NormalBike;Aarhus;207;900;20;7
+BikeOffer;TheOne;303;100;5;28-12-2020
+
