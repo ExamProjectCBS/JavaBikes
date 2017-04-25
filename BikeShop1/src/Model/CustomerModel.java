@@ -68,6 +68,7 @@ public class CustomerModel {
 				if(username.equals(userUsername)) {
 					System.out.println("Username correct");
 					usernameCorrect = true;
+					break;
 					//					this.username = username; 
 				}
 				else

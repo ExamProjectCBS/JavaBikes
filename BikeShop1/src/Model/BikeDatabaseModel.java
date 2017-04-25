@@ -199,110 +199,110 @@ public class BikeDatabaseModel {
 		}
 	}
 
-//	public void deleteBikes (){
-//		Scanner input = new Scanner (System.in);
-//
-//		System.out.println("Please write the ID of the bike you want to delete");
-//		String pattern3 = "\\d\\d\\d";
-//		String idBike = null;
-//		boolean idBikeCorrect = false;
-//		while(!idBikeCorrect) {
-//			System.out.println("\n Please enter the Bike in the following format XXX :");
-//			idBike = input.next();
-//			if(idBike.matches(pattern3)) {
-//				idBikeCorrect = true;
-//			}
-//			else
-//				System.out.println("Invalid BikeID, please enter the Bike in the following format XXX");
-//
-//			int index = 100;
-//			BikeModel bikeDelete = null;
-//			boolean bikeidFound = false;
-//			int integerIdBike = Integer.parseInt(idBike);
-//			for (int i=0; i < productList.size(); i++){
-//				BikeModel bike = productList.get(i);
-//				int actualbikeid = bike.getId();
-//				if (integerIdBike == actualbikeid){
-//					index = i;	
-//					bikeDelete = bike;
-//					bikeidFound = true;
-//				}	
-//
-//			}
-//
-//			if (bikeidFound){
-//				productList.remove(index);
-//				System.out.println("\n Bike " + bikeDelete.getId() + " was deleted from our database");	
-//
-//			}
-//			else {
-//				System.out.println("BikeID was not found. Please enter the ID of an existing user");
-//			}
-//
-//			ReadandWrite.ExportNewBikes("newBikes.txt", productList);
-//
-//		}
-//	}
+	public void deleteBikes (){
+		Scanner input = new Scanner (System.in);
 
-//	public void addBikes () {
-//		Scanner input = new Scanner (System.in);
-//
-//		boolean biketypeCorrect = false;
-//		String biketype = null;
-//		while (!biketypeCorrect){
-//			System.out.println("\n Please enter the type of the bike you want to add, chose between Ebike,NormalBike and BikeOffer");
-//			biketype = input.nextLine();
-//			if ((biketype.equals("Ebike")) || (biketype.equals("NormalBike")) || !biketype.equals("BikeOffer")) {
-//				biketypeCorrect = true;
-//			}
-//			else {
-//				System.out.println("\n Please enter a valid BikeType, chose between Ebike, NormalBike and BikeOffer: " + "You have entered " + biketype);
-//			}
-//		}
-//
-//		System.out.println("\n Chose the name of the model");
-//		String modelName = input.nextLine();
-//
-//		String pattern ="\\d\\d\\d";
-//		boolean idCorrect = false;
-//		String id = null;
-//		while (!idCorrect) {
-//			System.out.println("\n Chose an ID > 105 for Ebike,  > 205 for NormalBike and > 302 for BikeOffer");
-//			id = input.next();
-//			 if(id.matches(pattern)) /*&& (Integer.parseInt(id) >= 105 && Integer.parseInt(id) <= 200) || (Integer.parseInt(id) >= 205 && Integer.parseInt(id)  <= 300) || Integer.parseInt(id) >= 302) */{
-//				idCorrect = true;
-//			}
-//			else
-//				System.out.print("\n The ID must consist of 3 digits. "
-//						+ "You have entered: " + id); 
-//		}
-//
-//		String pattern2 = "\\d\\d\\d\\d\\d\\d";
-//		String price = null;
-//		boolean priceCorrect = false;
-//		while(!priceCorrect) {
-//			System.out.println("\n Chose a price for the bike you want to add");
-//			price = input.nextLine();
-//			if(price.matches(pattern2)) {
-//				priceCorrect = true;
-//				}
-//			else
-//				System.out.println("Invalid Price, please type in a price less then 100.000 kr");
-//		}
-//			
-//		
-//		System.out.println("\n Chose the amount of bikes available of this type");
-//		String stockAvailable = input.nextLine();
+		System.out.println("Please write the ID of the bike you want to delete");
+		String pattern3 = "\\d\\d\\d";
+		String idBike = null;
+		boolean idBikeCorrect = false;
+		while(!idBikeCorrect) {
+			System.out.println("\n Please enter the Bike in the following format XXX :");
+			idBike = input.next();
+			if(idBike.matches(pattern3)) {
+				idBikeCorrect = true;
+			}
+			else
+				System.out.println("Invalid BikeID, please enter the Bike in the following format XXX");
 
-//		bikesExportToFile(biketype, modelName, id, price, stockAvailable);
+			int index = 100;
+			BikeModel bikeDelete = null;
+			boolean bikeidFound = false;
+			int integerIdBike = Integer.parseInt(idBike);
+			for (int i=0; i < productList.size(); i++){
+				BikeModel bike = productList.get(i);
+				int actualbikeid = bike.getId();
+				if (integerIdBike == actualbikeid){
+					index = i;	
+					bikeDelete = bike;
+					bikeidFound = true;
+				}	
 
-//	}	
+			}
 
-//	public void bikesExportToFile (String biketype, String modelName, String id, String price, String stockAvailable){
-//		String details = biketype + ";" + modelName + ";" + id + ";" + stockAvailable + ";";
-//		ReadandWrite.ExportDetails("bikes.txt", details);
-//		System.out.println("\n Bike was added to our database");	
-//	}
+			if (bikeidFound){
+				productList.remove(index);
+				System.out.println("\n Bike " + bikeDelete.getId() + " was deleted from our database");	
+
+			}
+			else {
+				System.out.println("BikeID was not found. Please enter the ID of an existing user");
+			}
+
+			ReadandWrite.ExportNewBikes("newBikes.txt", productList);
+
+		}
+	}
+
+	public void addBikes () {
+		Scanner input = new Scanner (System.in);
+
+		boolean biketypeCorrect = false;
+		String biketype = null;
+		while (!biketypeCorrect){
+			System.out.println("\n Please enter the type of the bike you want to add, chose between Ebike,NormalBike and BikeOffer");
+			biketype = input.nextLine();
+			if ((biketype.equals("Ebike")) || (biketype.equals("NormalBike")) || !biketype.equals("BikeOffer")) {
+				biketypeCorrect = true;
+			}
+			else {
+				System.out.println("\n Please enter a valid BikeType, chose between Ebike, NormalBike and BikeOffer: " + "You have entered " + biketype);
+			}
+		}
+
+		System.out.println("\n Chose the name of the model");
+		String modelName = input.nextLine();
+
+		String pattern ="\\d\\d\\d";
+		boolean idCorrect = false;
+		String id = null;
+		while (!idCorrect) {
+			System.out.println("\n Chose an ID > 105 for Ebike,  > 205 for NormalBike and > 302 for BikeOffer");
+			id = input.next();
+			 if(id.matches(pattern)) /*&& (Integer.parseInt(id) >= 105 && Integer.parseInt(id) <= 200) || (Integer.parseInt(id) >= 205 && Integer.parseInt(id)  <= 300) || Integer.parseInt(id) >= 302) */{
+				idCorrect = true;
+			}
+			else
+				System.out.print("\n The ID must consist of 3 digits. "
+						+ "You have entered: " + id); 
+		}
+
+		String pattern2 = "\\d\\d\\d\\d\\d\\d";
+		String price = null;
+		boolean priceCorrect = false;
+		while(!priceCorrect) {
+			System.out.println("\n Chose a price for the bike you want to add");
+			price = input.nextLine();
+			if(price.matches(pattern2)) {
+				priceCorrect = true;
+				}
+			else
+				System.out.println("Invalid Price, please type in a price less then 100.000 kr");
+		}
+			
+		
+		System.out.println("\n Chose the amount of bikes available of this type");
+		String stockAvailable = input.nextLine();
+
+		bikesExportToFile(biketype, modelName, id, price, stockAvailable);
+
+	}	
+
+	public void bikesExportToFile (String biketype, String modelName, String id, String price, String stockAvailable){
+		String details = biketype + ";" + modelName + ";" + id + ";" + stockAvailable + ";";
+		ReadandWrite.ExportDetails("bikes.txt", details);
+		System.out.println("\n Bike was added to our database");	
+	}
 	
 	
 

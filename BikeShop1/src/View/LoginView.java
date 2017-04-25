@@ -45,8 +45,8 @@ public class LoginView {
 
 			case "3":
 				//				loginVerification();
-				//				myManagerModel.editingCustomerDb();
-				//				myReadandWrite.importAllProductDetails();
+//								myManagerModel.editingCustomerDb();
+								myReadandWrite.importAllProductDetails();
 				myManagerModel.editingBikeDb();
 				correct =true;
 				break;

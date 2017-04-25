@@ -65,6 +65,7 @@ public class ReadandWrite {
 		return customerList;
 	}
 	
+	//put in manager view
 	public void printCustomerDetails(){
 		System.out.println("===================================================================================================================================================================================================");
 		ArrayList<CustomerModel> customerList = new ArrayList<CustomerModel>();
@@ -78,55 +79,55 @@ public class ReadandWrite {
 		System.out.println("===================================================================================================================================================================================================");
 
 	}
-//	public static BikeModel importBikes(String line){
-//		
-//		String[] values = line.split(";"); 
-//		if (values[0].equals("NormalBike")){
-//			int id = Integer.parseInt(values[2]);
-//			double price = Double.parseDouble(values[3]);
-//			int stockAvailable = Integer.parseInt(values[4]);
-//			int gears = Integer.parseInt(values[5]);
-//			NormalBikeModel NormalBikeModelFromFile = new NormalBikeModel(values[0], values[1], id, price, stockAvailable, gears);
-//			
-//			return NormalBikeModelFromFile;
-//		}
-//		else if (values[0].equals("Ebike")){
-//			int id = Integer.parseInt(values[2]);
-//			double price = Double.parseDouble(values[3]);
-//			int stockAvailable = Integer.parseInt(values[4]);
-//			int batteryRange = Integer.parseInt(values[5]);
-//			int chargingTime = Integer.parseInt(values[6]);
-//			EbikeModel EbikeModelFromFile = new EbikeModel(values[0], values[1], id, price, stockAvailable, batteryRange, chargingTime);
-//			
-//			return 	EbikeModelFromFile;	
-//		}
-//		
-//		else {
-//
-//			int id = Integer.parseInt(values[2]);
-//			double price = Double.parseDouble(values[3]);
-//			int stockAvailable = Integer.parseInt(values[4]);
-//			BikeOfferModel BikeOfferModelFromFile = new BikeOfferModel(values [0], values[1], id, price, stockAvailable, values[5]);
-//			
-//			return BikeOfferModelFromFile;
-//		}	
-//		
-//	}
+	public static BikeModel importBikes(String line){
+		
+		String[] values = line.split(";"); 
+		if (values[0].equals("NormalBike")){
+			int id = Integer.parseInt(values[2]);
+			double price = Double.parseDouble(values[3]);
+			int stockAvailable = Integer.parseInt(values[4]);
+			int gears = Integer.parseInt(values[5]);
+			NormalBikeModel NormalBikeModelFromFile = new NormalBikeModel(values[0], values[1], id, price, stockAvailable, gears);
+			
+			return NormalBikeModelFromFile;
+		}
+		else if (values[0].equals("Ebike")){
+			int id = Integer.parseInt(values[2]);
+			double price = Double.parseDouble(values[3]);
+			int stockAvailable = Integer.parseInt(values[4]);
+			int batteryRange = Integer.parseInt(values[5]);
+			int chargingTime = Integer.parseInt(values[6]);
+			EbikeModel EbikeModelFromFile = new EbikeModel(values[0], values[1], id, price, stockAvailable, batteryRange, chargingTime);
+			
+			return 	EbikeModelFromFile;	
+		}
+		
+		else {
+
+			int id = Integer.parseInt(values[2]);
+			double price = Double.parseDouble(values[3]);
+			int stockAvailable = Integer.parseInt(values[4]);
+			BikeOfferModel BikeOfferModelFromFile = new BikeOfferModel(values [0], values[1], id, price, stockAvailable, values[5]);
+			
+			return BikeOfferModelFromFile;
+		}	
+		
+	}
 
 
 
-//	public  ArrayList<BikeModel> importAllProductDetails(){
-//		ArrayList<BikeModel> productList = new ArrayList<BikeModel>();
-//		Scanner input = importDetails("bikes.txt");
-//
-//		// checking each line 
-//		while (input.hasNextLine()) {
-//			
-//			productList.add(importBikes(input.nextLine()));//passing each line to the method getBikes which returns a Bike
-//				} 								//then added to a ArrayList
-//		
-//		return productList;
-//	}
+	public  ArrayList<BikeModel> importAllProductDetails(){
+		ArrayList<BikeModel> productList = new ArrayList<BikeModel>();
+		Scanner input = importDetails("bikes.txt");
+
+		// checking each line 
+		while (input.hasNextLine()) {
+			
+			productList.add(importBikes(input.nextLine()));//passing each line to the method getBikes which returns a Bike
+				} 								//then added to a ArrayList
+		
+		return productList;
+	}
 
 
 	
