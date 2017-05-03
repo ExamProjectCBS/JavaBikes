@@ -27,7 +27,7 @@ public class ManagerModel {
 			continuing = true;
 			break;
 			case "2": 
-								myManagerView.managerExportDeleteCustomerFromFile();
+				myManagerView.managerExportDeleteCustomerFromFile();
 				break;
 			}
 		}
@@ -48,7 +48,7 @@ public class ManagerModel {
 			switch (editingChoice) {
 
 			case"1": 
-							myDb.addBikes();
+				myDb.addBikes();
 				continuing = true;
 				break;
 			case "2": 

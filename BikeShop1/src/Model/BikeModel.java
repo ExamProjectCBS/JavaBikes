@@ -2,11 +2,10 @@ package Model;
 
 public class BikeModel {
 
-	private String bikeType;
-	private String name;
-	private int id;
+	private String bikeType, name;
+	private int id, stockAvailable;
 	private double price;
-	private int stockAvailable;
+
 	
 	public BikeModel() {
 		

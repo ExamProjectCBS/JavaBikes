@@ -3,8 +3,7 @@ package Model;
 public class EbikeModel extends BikeModel {
 
 
-	private int batteryRange;
-	private int chargingTime;
+	private int batteryRange, chargingTime;
 	
 //creates default ebikemodel
 public EbikeModel(){

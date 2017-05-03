@@ -2,11 +2,7 @@ package Model;
 
 public class CreditCardModel {
 
-	private String cardNumber;
-	private String cardHolder;
-	private String cardExpiryMonth;
-	private String cardExpiryYear;
-	private String cardCVV;
+	private String cardNumber, cardHolder, cardExpiryMonth, cardExpiryYear, cardCVV;
 	
 	//Creating default CreditCardModel object
 	public CreditCardModel (){

@@ -8,8 +8,7 @@ import data.ReadandWrite;
 
 public class ManagerView {
 
-	private String username;
-	private String password;
+	private String username, password;
 
 	
 	ReadandWrite myReadandWrite = new ReadandWrite();
@@ -34,15 +33,7 @@ public class ManagerView {
 	
 	
 	public CustomerModel addCustomer () {
-		 String firstName;
-		 String lastName;
-		 String phoneNumber;
-		 String address;
-		 String postCode;
-		 String dob;
-		 String cpr;
-		 String username;
-		 String password;
+		 String firstName, lastName, phoneNumber, address, postCode, dob, cpr, username, password;
 		
 		CustomerModel addedCustomer = new CustomerModel();
 		Scanner input = new Scanner(System.in); 

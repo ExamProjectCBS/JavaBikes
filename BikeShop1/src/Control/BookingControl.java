@@ -12,7 +12,6 @@ import View.CustomerView;
 import View.LoginView;
 import View.ShoppingCartView;
 import data.ReadandWrite;
-// Is this still working?
 
 public class BookingControl {
 
@@ -34,7 +33,7 @@ public class BookingControl {
 
 		// Calling methods
 
-		myCustomerModel.welcomeView();
+		myCustomerView.welcomeView();
 		myLogin.customerScreen();
 		//		System.out.println(ReadandWrite.customerList.toString());	
 		//		myCustomerView.exportCustomerToFile();

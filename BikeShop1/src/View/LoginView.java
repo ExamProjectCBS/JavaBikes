@@ -6,9 +6,6 @@ import Model.ManagerModel;
 import data.ReadandWrite;
 
 public class LoginView {
-
-
-	CustomerModel myCustomer = new CustomerModel();
 	CustomerView myCustomerView = new CustomerView();
 	CustomerModel myCustomerModel = new CustomerModel();
 	ReadandWrite myReadandWrite = new ReadandWrite();
@@ -38,15 +35,15 @@ public class LoginView {
 				break;
 
 			case "2":
-				
-				myCustomerModel.loginCheck();
+
+				myCustomerView.loginCheck();
 				correct = true;
 				break;
 
 			case "3":
 				//				loginVerification();
-//								myManagerModel.editingCustomerDb();
-								myReadandWrite.importAllProductDetails();
+				//								myManagerModel.editingCustomerDb();
+				myReadandWrite.importAllProductDetails();
 				myManagerModel.editingBikeDb();
 				correct =true;
 				break;

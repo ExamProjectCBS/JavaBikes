@@ -10,7 +10,7 @@ public class BikeDatabaseModel {
 
 	ReadandWrite myReadandWrite = new ReadandWrite();
 	
-//	public ArrayList <BikeModel> productList = myReadandWrite.importAllProductDetails();
+	public ArrayList <BikeModel> productList = myReadandWrite.importAllProductDetails();
 
 	public ArrayList <BikeModel> normalbikes = new ArrayList<BikeModel>();
 	public ArrayList <BikeModel> ebikes = new ArrayList<BikeModel>();
@@ -299,7 +299,7 @@ public class BikeDatabaseModel {
 	}	
 
 	public void bikesExportToFile (String biketype, String modelName, String id, String price, String stockAvailable){
-		String details = biketype + ";" + modelName + ";" + id + ";" + stockAvailable + ";";
+		String details = biketype + ";" + modelName + ";" + id + ";" + stockAvailable;
 		ReadandWrite.ExportDetails("bikes.txt", details);
 		System.out.println("\n Bike was added to our database");	
 	}
