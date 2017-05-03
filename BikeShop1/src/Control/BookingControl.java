@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import Model.BikeDatabaseModel;
 import Model.CustomerModel;
-import Model.PaymentModel;
+import Model.ReceiptModel;
 import View.CreditCardView;
 import View.CustomerView;
 import View.LoginView;
@@ -18,7 +18,7 @@ public class BookingControl {
 	public static void main(String[] args) {
 
 		Scanner input = new Scanner(System.in);
-//testbyremus hghfhfh
+
 		// Creating objects
 		LoginView myLogin = new LoginView();
 		CustomerView myCustomerView = new CustomerView();
@@ -26,7 +26,7 @@ public class BookingControl {
 		ShoppingCartView myShoppingView = new ShoppingCartView();
 		BikeDatabaseModel db = new BikeDatabaseModel();
 		CreditCardView myCreditCardView = new CreditCardView();
-		PaymentModel myPaymentModel = new PaymentModel();
+		ReceiptModel myPaymentModel = new ReceiptModel();
 		//		ReadandWrite myReadandWrite = new ReadandWrite();
 
 		//		myReadandWrite.importAllCustomerDetails();

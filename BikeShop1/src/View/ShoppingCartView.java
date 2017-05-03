@@ -77,8 +77,15 @@ public class ShoppingCartView {
 
 			System.out.println("\t ID: " + this.basket.get(i).getId() +"\t Quantity:  " +
 					this.basket.get(i).getQuantity() + "\n");
-//			System.out.println("=====================================");
-//			System.out.println("The total sum of your orders is " this.basket.get(i).getPrice()*this.basket.get(i).getQuantity()  );
+System.out.println("=====================================");
+			System.out.println("The total sum of your orders is " + this.basket.get(i).getPrice()*this.basket.get(i).getQuantity() );
+			System.out.println("Price is " + this.basket.get(i).getPrice());
+			
+			double bikePrice =  this.basket.get(i).getPrice();
+			System.out.println(bikePrice);
+				
+					
+					
 		}
 
 	}

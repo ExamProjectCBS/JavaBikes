@@ -144,10 +144,11 @@ public class CustomerView {
 					System.out.println("Username correct");
 					usernameCorrect = true;
 					break;
-					//					this.username = username; 
+					//this.username = username; 
 				}
 				else
 					System.out.println("Username was not found in database, please try again");
+			
 			}
 		}
 
