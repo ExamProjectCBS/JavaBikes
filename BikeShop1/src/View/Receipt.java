@@ -18,8 +18,22 @@ Receipt(BikeModel currentBike){
 
 
 			
-			
 }
+
+public Receipt() {
+	// TODO Auto-generated constructor stub
+}
+
+public String getInvoice() {
+	return invoice;
+}
+
+
 	
+public void printInvoice(){
 	
+	System.out.println(invoice);
+}
+
+
 }

@@ -1,6 +1,7 @@
 package View;
 
 import java.util.*;
+import java.util.jar.Attributes.Name;
 
 import Model.BikeDatabaseModel;
 import Model.CustomerModel;
@@ -18,7 +19,9 @@ public class ShoppingCartView {
 		db.fillDatabase();
 		boolean shopping = false;
 		int productSelect;
+		String productNSelect;
 		int quantitySelect;
+		
 
 		while (!shopping) {
 			System.out.println("\n=====================================");
@@ -29,6 +32,7 @@ public class ShoppingCartView {
 
 			if (db.isProduct(productSelect)) {
 				db.printProduct(productSelect);
+				
 
 				System.out.println("=====================================");
 				System.out.print("\n Please enter the amount of of bikes of this model: ");
@@ -59,6 +63,7 @@ public class ShoppingCartView {
 	}
 
 	public void insertInBasket(int id, int quantity) {
+		String name = null;
 		this.basket.add(new ShoppingProductModel(id,quantity));
 	}
 
@@ -69,21 +74,19 @@ public class ShoppingCartView {
 		for(int i=0; i < basket.size(); i++) { 
 
 			if (this.basket.get(i).getId() > 100 && this.basket.get(i).getId()<200) 
-				System.out.print("Ebikes in your shopping basket\n");
-			else if (this.basket.get(i).getId() > 200 &&  this.basket.get(i).getId()<300)
+				System.out.print("Ebikes in your shopping basket\n" +"\t Name" + this.basket.get(i).getBikeType() + "\t IDtest: " + this.basket.get(i).getId() +"\t Quantity:  " +
+						this.basket.get(i).getQuantity() + "\n");
+			else if (this.basket.get(i).getId()  > 200 &&	  this.basket.get(i).getId()<300)
 				System.out.print("Normal bikes in your shopping basket \n");
 			else
 				System.out.print("Bike offers in your shopping basket \n");
-
-			System.out.println("\t ID: " + this.basket.get(i).getId() +"\t Quantity:  " +
+			System.out.println(this.basket.get(i).getName());
+			System.out.println("\t Name" + this.basket.get(i).getName() + "\t IDtest: " + this.basket.get(i).getId() +"\t Quantity:  " +
 					this.basket.get(i).getQuantity() + "\n");
-System.out.println("=====================================");
-			System.out.println("The total sum of your orders is " + this.basket.get(i).getPrice()*this.basket.get(i).getQuantity() );
-			System.out.println("Price is " + this.basket.get(i).getPrice());
-			
-			double bikePrice =  this.basket.get(i).getPrice();
-			System.out.println(bikePrice);
-				
+System.out.println("=================test====================");
+		//	System.out.println("The total sum of your orders is " + this.basket.get(i).getPrice()*this.basket.get(i).getQuantity() );
+		//  System.out.println("Price is " + this.basket.get(i).getPrice());
+		
 					
 					
 		}
