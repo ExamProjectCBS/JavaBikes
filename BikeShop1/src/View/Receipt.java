@@ -15,8 +15,6 @@ Receipt(BikeModel currentBike){
 	
 	invoice += String.format("Get Bike id", currentBike.getId()); 
 	
-
-
 			
 }
 

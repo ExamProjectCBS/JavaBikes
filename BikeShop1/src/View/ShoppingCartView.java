@@ -19,7 +19,6 @@ public class ShoppingCartView {
 		db.fillDatabase();
 		boolean shopping = false;
 		int productSelect;
-		String productNSelect;
 		int quantitySelect;
 		
 
@@ -64,7 +63,7 @@ public class ShoppingCartView {
 
 	public void insertInBasket(int id, int quantity) {
 		String name = null;
-		this.basket.add(new ShoppingProductModel(id,quantity));
+		this.basket.add(new ShoppingProductModel(name,id,quantity));
 	}
 
 	public void printBasket() {
@@ -75,13 +74,13 @@ public class ShoppingCartView {
 
 			if (this.basket.get(i).getId() > 100 && this.basket.get(i).getId()<200) 
 				System.out.print("Ebikes in your shopping basket\n" +"\t Name" + this.basket.get(i).getBikeType() + "\t IDtest: " + this.basket.get(i).getId() +"\t Quantity:  " +
-						this.basket.get(i).getQuantity() + "\n");
+						this.basket.get(i).getQuantity()  + this.basket.get(i).getPrice() + "\n" );
 			else if (this.basket.get(i).getId()  > 200 &&	  this.basket.get(i).getId()<300)
 				System.out.print("Normal bikes in your shopping basket \n");
 			else
 				System.out.print("Bike offers in your shopping basket \n");
 			System.out.println(this.basket.get(i).getName());
-			System.out.println("\t Name" + this.basket.get(i).getName() + "\t IDtest: " + this.basket.get(i).getId() +"\t Quantity:  " +
+			System.out.println("\t Name" + this.basket.get(i).getName() + this.basket.get(i).getName() + "\t IDtest: " + this.basket.get(i).getId() +"\t Quantity:  " +
 					this.basket.get(i).getQuantity() + "\n");
 System.out.println("=================test====================");
 		//	System.out.println("The total sum of your orders is " + this.basket.get(i).getPrice()*this.basket.get(i).getQuantity() );

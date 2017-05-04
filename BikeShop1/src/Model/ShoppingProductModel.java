@@ -1,16 +1,22 @@
 package Model;
 
+
+
 public class ShoppingProductModel extends BikeModel {
 	
 	private int quantity;
+	
+	
+	
 
 	
 	//getters and setters
-	public ShoppingProductModel(int id, int quantity) {
+	public ShoppingProductModel(String currentProductName, int id, int quantity) {
 		setId(id);
 	
 		this.quantity = quantity;
 	}
+
 
 	public int getQuantity() {
 		return quantity;
@@ -20,8 +26,14 @@ public class ShoppingProductModel extends BikeModel {
 		this.quantity = quantity;
 	}
 	
+	public void getcurrentProductName(int id) { 
+		
+		
+		
+	}
+	
 	@Override
 	public String toString(){
-		return (" ID " + this.getId() + " Quantity " + this.getQuantity());
+		return ( " ID " + this.getId() + " Quantity " + this.getQuantity());
 	}	
 }

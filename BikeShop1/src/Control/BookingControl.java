@@ -26,7 +26,7 @@ public class BookingControl {
 		ShoppingCartView myShoppingView = new ShoppingCartView();
 		BikeDatabaseModel db = new BikeDatabaseModel();
 		CreditCardView myCreditCardView = new CreditCardView();
-		ReceiptModel myPaymentModel = new ReceiptModel();
+		ReceiptModel myReceiptModel = new ReceiptModel();
 		//		ReadandWrite myReadandWrite = new ReadandWrite();
 
 		//		myReadandWrite.importAllCustomerDetails();
@@ -43,6 +43,8 @@ public class BookingControl {
 		myShoppingView.printBasket();
 		myCreditCardView.CreditCardRegistration();
 		myCustomerView.pickUp();
-		myPaymentModel.printReceipt();
+		myReceiptModel.printReceipt();
+		
+		
 	}
 }

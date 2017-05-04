@@ -128,18 +128,20 @@ public class BikeDatabaseModel {
 		System.out.println("You have chosen the following product: "  );		
 		System.out.println(this.normalbikes.get(i).getName() +"\t ID: " + this.normalbikes.get(i).getId() +"\t Price:  " +
 				this.normalbikes.get(i).getPrice() +  "\t Stock:  " +	this.normalbikes.get(i).getStockAvailable() ); 
+		System.out.println(this.normalbikes.get(i).getPrice() + "12342");
 	}
 
 	public void findEbikes (int i) {
 		System.out.println("You have chosen the following product: "  );		
 		System.out.println(this.ebikes.get(i).getName() +"\t ID: " + this.ebikes.get(i).getId() +"\t Price:  " +
 				this.ebikes.get(i).getPrice() +  "\t Stock:  " +	this.ebikes.get(i).getStockAvailable() ); 
+		System.out.println(this.normalbikes.get(i).getPrice() + " 12342");
 	}
-
 	public void findBikeOffers(int i){
 		System.out.println("You have chosen the following product: "  );		
 		System.out.println(this.bikeoffers.get(i).getName() +"\t ID: " + this.bikeoffers.get(i).getId() +"\t Price:  " +
 				this.bikeoffers.get(i).getPrice() +  "\t Stock:  " +	this.bikeoffers.get(i).getStockAvailable() ); 
+		System.out.println(this.normalbikes.get(i).getPrice() + "12342");
 	}
 
 	public void printProduct(int id) {
@@ -153,7 +155,7 @@ public class BikeDatabaseModel {
 
 		for(int i=0; i < this.ebikes.size(); i++) { 	
 			if (id == this.ebikes.get(i).getId()) {
-				findEbikes (i);
+				findEbikes(i);
 				return;
 			}
 		}
