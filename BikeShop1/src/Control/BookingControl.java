@@ -43,7 +43,7 @@ public class BookingControl {
 		myShoppingView.printBasket();
 		myCreditCardView.CreditCardRegistration();
 		myCustomerView.pickUp();
-		myReceiptModel.printReceipt();
+		myReceiptModel.printReceipt(myShoppingView);
 		
 		
 	}

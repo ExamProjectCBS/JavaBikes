@@ -19,15 +19,14 @@ public class CreditCardView {
 		while (!cardNumberCorrect) {
 			System.out.println("\n Please enter your credit card number consisting of 16 digits:");
 			String cardNumber = input.nextLine();
-
 			if((cardNumber.matches(pattern) && cardNumber.length() == 16)){
 				creditCard1.setCardNumber(cardNumber);
 				cardNumberCorrect = true;
 			}
 			else {
 				System.out.println("\n Invalid card number, please type a card number consisting of 16 digits "); 
-			}
-		}
+			} 
+		} 
 		//Prompting user to type in credit card holder
 		System.out.print("Please insert the name of the card holder: ");
 		String cardHolder = input.nextLine();
@@ -84,7 +83,6 @@ public class CreditCardView {
 		System.out.println("Your credit card was accepted!");
 		System.out.println("=================================================================");
 		return creditCard1;
-	}
+}
 	
-
 }

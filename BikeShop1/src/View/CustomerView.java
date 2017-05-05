@@ -130,12 +130,14 @@ public class CustomerView {
 		System.out.println("=================================================================\n");
 
 		String username = null;
-		boolean usernameCorrect = false;
-		while(!usernameCorrect) {
-
+		
 
 			System.out.println("Please type in your username ");
 			username = input.next();
+			boolean usernameCorrect = false;
+			this.username = username;
+			while(!usernameCorrect) {
+
 
 			for (int i = 0; i< customerList.size(); i++) {
 				CustomerModel customer = customerList.get(i);
@@ -146,7 +148,7 @@ public class CustomerView {
 					break;
 					//this.username = username; 
 				}
-				else
+				else 
 					System.out.println("Username was not found in database, please try again");
 			
 			}

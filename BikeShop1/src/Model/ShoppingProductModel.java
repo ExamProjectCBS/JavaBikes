@@ -11,7 +11,7 @@ public class ShoppingProductModel extends BikeModel {
 
 	
 	//getters and setters
-	public ShoppingProductModel(String currentProductName, int id, int quantity) {
+	public ShoppingProductModel(int id, int quantity) {
 		setId(id);
 	
 		this.quantity = quantity;
@@ -26,11 +26,9 @@ public class ShoppingProductModel extends BikeModel {
 		this.quantity = quantity;
 	}
 	
-	public void getcurrentProductName(int id) { 
+
 		
-		
-		
-	}
+	
 	
 	@Override
 	public String toString(){
